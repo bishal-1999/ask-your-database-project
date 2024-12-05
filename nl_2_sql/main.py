@@ -21,7 +21,7 @@ def main():
         if connection:
             llm = get_llm_endpoint()
 
-            fetch_related_table_names = ['discounts','customers','orders']
+            fetch_related_table_names = ['t_shirts','discounts','customers','orders']
             sql_query = generate_sql_query(user_question, connection, llm, fetch_related_table_names)
 
             results = run_query(connection, sql_query)
